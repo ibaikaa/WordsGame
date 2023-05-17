@@ -18,9 +18,3 @@ struct TitleText: View {
             .cornerRadius(16)
     }
 }
-
-struct TitleText_Previews: PreviewProvider {
-    static var previews: some View {
-         TitleText(title: "Words Game")
-    }
-}

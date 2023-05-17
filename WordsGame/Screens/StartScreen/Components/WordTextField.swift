@@ -1,5 +1,5 @@
 //
-//  StartViewTextField.swift
+//  WordTextField.swift
 //  WordsGame
 //
 //  Created by ibaikaa on 17/5/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct StartViewTextField: View {
+struct WordTextField: View {
     @State var longWord: Binding<String>
     var placeholder: String
      

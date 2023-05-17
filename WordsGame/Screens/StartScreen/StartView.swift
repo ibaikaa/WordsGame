@@ -20,12 +20,12 @@ struct StartView: View {
             TitleText(title: title)
             
             VStack(spacing: 20) {
-                StartViewTextField(longWord: $longWord, placeholder: "Введите длинное слово")
+                WordTextField(longWord: $longWord, placeholder: "Введите длинное слово")
                     .padding(.horizontal, 20)
                 
-                StartViewTextField(longWord: $playerOne, placeholder: "Первый игрок")                    .padding(.horizontal, 20)
+                WordTextField(longWord: $playerOne, placeholder: "Первый игрок")                    .padding(.horizontal, 20)
                 
-                StartViewTextField(longWord: $playerTwo, placeholder: "Второй игрок")
+                WordTextField(longWord: $playerTwo, placeholder: "Второй игрок")
                     .padding(.horizontal, 20)
             }
             .padding(.top, 32)

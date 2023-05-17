@@ -17,14 +17,14 @@ struct GameView: View {
                     print("Exit button tapped")
                 } label: {
                     Text("Выход")
-                        .padding(10)
+                        .padding(6)
+                        .padding(.horizontal)
                         .font(.custom("AvenirNext-Bold", size: 30))
                         .foregroundColor(.white)
                         .background(.yellow)
                         .cornerRadius(100)
+                        .padding(6)
                 }
-                
-                Spacer()
                 Spacer()
             }
             .padding(.horizontal, 16)
@@ -33,16 +33,14 @@ struct GameView: View {
                 .font(.custom("AvenirNext-Bold", size: 42))
                 .foregroundColor(.white)
                 .padding()
-            
-            
-            HStack {
-                PlayerCardView()
-                PlayerCardView()
+                .shadow(color: .black, radius: 5)
+            HStack(spacing: 20) {
+                PlayerCardView(player: Player(number: .first, name: "Ian"))
+                PlayerCardView(player: Player(number: .second, name: "Baika"))
             }
-            .padding(.horizontal, 16)
             .padding(.bottom, 20)
             
-            StartViewTextField(longWord: $word, placeholder: "Введите слово...")
+            WordTextField(longWord: $word, placeholder: "Введите слово...")
                 .padding(.horizontal, 16)
                 .padding(.bottom, 30)
             
@@ -50,12 +48,13 @@ struct GameView: View {
                 print("Ready button tapped")
             } label: {
                 Text("Готово")
-                    .padding()
-                    .padding(.horizontal, 60)
-                    .background(.yellow)
+                    .padding(12)
                     .foregroundColor(.white)
-                    .font(.custom("AvenirNext-Bold", size: 35))
-                    .cornerRadius(100)
+                    .frame(maxWidth: .infinity)
+                    .background(.yellow)
+                    .cornerRadius(12)
+                    .font(.custom("AvenirNext-Bold", size: 30))
+                    .padding(.horizontal)
             }
             
             Spacer()
